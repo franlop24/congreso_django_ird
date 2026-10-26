@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contact Page</h1>
+<h2>{{ utt.name }}</h2>
+<p>{{ utt.short_name }}</p>
+<p>Teléfono: {{ utt.phone }}</p>
+<a href="{{ utt.url }}">Ir a ...</a>
+{% endblock %}
