@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # local apps
     'home',
+    'workshops',
 ]
 
 MIDDLEWARE = [
