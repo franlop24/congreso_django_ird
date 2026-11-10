@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Talleres Congreso 2026</h1>
+
+<style>
+    .container {
+        display: flex;
+        gap: 10px;
+    }
+    .container .card {
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .card .card-header {
+        color: white;
+        background-size: cover;
+    }
+</style>
+
+<div class="container">
+    {% for w in workshops %}
+    <div class="card">
+        {% if w.image %}
+        <div class="card-header" style="background-image: url('{{ w.image.url }}');">
+        {% else %}
+        <div class="card-header">
+        {% endif %}
+            <h2>{{ w.name }}</h2>
+        </div>
+        <div class="card-body">
+            <p>{{ w.description }}</p>
+            <p>{{ w.classroom }}</p>
+            <p>{{ w.date }} - {{ w.start }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
