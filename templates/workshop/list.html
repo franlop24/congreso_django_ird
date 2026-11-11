@@ -6,16 +6,24 @@
 <style>
     .container {
         display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         gap: 10px;
     }
     .container .card {
-        width: 200px;
+        width: 400px;
         border: 1px solid black;
         border-radius: 10px;
     }
     .card .card-header {
         color: white;
         background-size: cover;
+        background-position: center;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 10px;
+    }
+    .card .card-body {
+        padding: 10px;
     }
 </style>
 
