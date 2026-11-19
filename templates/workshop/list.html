@@ -16,7 +16,7 @@
             <p>{{ w.description }}</p>
             <p>{{ w.classroom }}</p>
             <p>{{ w.date }} - {{ w.start }}</p>
-            <a class="btn">Ver detalles</a>
+            <a class="btn" href="{% url 'workshops:details' w.id %}">Ver detalles</a>
         </div>
     </div>
     {% endfor %}
